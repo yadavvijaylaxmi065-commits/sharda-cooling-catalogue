@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharda Cooling System - Product Catalogue 2024</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .catalogue-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Cover Page */
+        .cover-page {
+            background: linear-gradient(135deg, #1a4d1f 0%, #2c5f2d 50%, #4a9d4f 100%);
+            color: white;
+            padding: 100px 50px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><circle cx="100" cy="100" r="300" fill="rgba(255,255,255,0.03)"/><circle cx="1100" cy="700" r="400" fill="rgba(255,255,255,0.03)"/></svg>');
+            background-size: cover;
+        }
+        
+        .cover-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cover-page h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cover-page h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .cover-page p {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .catalogue-year {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 50px;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
+            padding: 20px 0;
+            display: inline-block;
+        }
+        
+        /* Page Section */
+        .catalogue-page {
+            padding: 60px 50px;
+            page-break-after: always;
+            min-height: 100vh;
+        }
+        
+        .page-header {
+            border-bottom: 4px solid #2c5f2d;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .page-header h2 {
+            color: #2c5f2d;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .page-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* Company Info */
+        .company-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #4a9d4f;
+        }
+        
+        .info-box h3 {
+            color: #2c5f2d;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .info-box p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .info-box strong {
+            color: #2c5f2d;
+        }
+        
+        /* System Diagram */
+        .system-diagram {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .system-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .diagram-caption {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .product-item {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .product-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .product-details {
+            padding: 25px;
+        }
+        
+        .product-details h3 {
+            color: #2c5f2d;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .product-details p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .specifications {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .specifications h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .specifications ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .specifications li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .specifications li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #4a9d4f;
+            font-weight: bold;
+        }
+        
+        /* Features Section */
+        .features-section {
+            margin-top: 50px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-box h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .feature-box p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Technical Specs Table */
+        .specs-table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        .specs-table th {
+            background: #2c5f2d;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        
+        .specs-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .specs-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        /* Contact Page */
+        .contact-page {
+            background: linear-gradient(135deg, #2c5f2d 0%, #4a9d4f 100%);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .contact-page h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .contact-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-box p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+        }
+        
+        /* Footer */
+        .catalogue-footer {
+            background: #1a4d1f;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .catalogue-footer p {
+            margin-bottom: 10px;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .catalogue-page {
+                page-break-after: always;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cover-page h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cover-page h2 {
+                font-size: 1.8rem;
+            }
+            
+            .product-grid,
+            .company-info,
+            .features-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .catalogue-page {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="catalogue-container">
+        
+        <!-- Cover Page -->
+        <div class="cover-page">
+            <div class="cover-content">
+                <h1>SHARDA COOLING SYSTEM</h1>
+                <h2>Product Catalogue</h2>
+                <p>Industrial Cooling Towers | Scrubbers | PVC Fills</p>
+                <p>Premium Quality Cooling Solutions</p>
+                <p>Trusted by Industries Across India</p>
+                <div class="catalogue-year">2024-2025</div>
+            </div>
+        </div>
+        
+        <!-- Company Overview -->
+        <div class="catalogue-page">
+            <div class="page-header">
+                <h2>About Sharda Cooling System</h2>
+                <p>Your Trusted Partner in Industrial Cooling Solutions</p>
+            </div>
+            
+            <div class="company-info">
+                <div class="info-box">
+                    <h3>Who We Are</h3>
+                    <p>Sharda Cooling System is a leading manufacturer and supplier of high-quality industrial cooling towers, scrubbers, and PVC fills in India.</p>
+                    <p>With years of experience in the industry, we have established ourselves as a trusted name in providing efficient and reliable cooling solutions for various industrial applications.</p>
+                    <p><strong>Established:</strong> 2008</p>
+                    <p><strong>Experience:</strong> 15+ Years</p>
+                    <p><strong>Projects:</strong> 1000+ Completed</p>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Our Expertise</h3>
+                    <p><strong>Manufacturing:</strong> State-of-the-art facility with advanced machinery</p>
+                    <p><strong>Quality:</strong> ISO certified products meeting international standards</p>
+                    <p><strong>Customization:</strong> Tailored solutions for specific requirements</p>
+                    <p><strong>Service:</strong> Pan-India delivery and installation support</p>
+                    <p><strong>Industries Served:</strong> Power Plants, Chemical Processing, HVAC, Manufacturing, Pharmaceuticals, Food Processing</p>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <h3 style="color: #2c5f2d; font-size: 2rem; margin-bottom: 20px;">Why Choose Us</h3>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon">🏭</div>
+                        <h4>Premium Quality</h4>
+                        <p>High-grade materials ensuring durability and performance</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">⚡</div>
+                        <h4>Energy Efficient</h4>
+                        <p>Optimized designs reducing operational costs</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🔧</div>
+                        <h4>Easy Maintenance</h4>
+                        <p>Simple design for hassle-free upkeep</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">✅</div>
+                        <h4>ISO Certified</h4>
+                        <p>Meeting international quality standards</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🚚</div>
+                        <h4>Pan India Service</h4>
+                        <p>Timely delivery across all major cities</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">💼</div>
+                        <h4>Expert Support</h4>
+                        <p>Dedicated technical team for assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cooling System Diagram -->
+        <div class="catalogue-page">
+            <div class="page-header">
+                <h2>Direct Cooling System</h2>
+                <p>Understanding the Complete Cooling Tower System</p>
+            </div>
+            
+            <div class="system-diagram">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/8c929026-b14e-40db-a8e4-36a92aca396b/2025-12-17T09-49-46-395Z-4e14f49a-chat-image-1765964986375-0.jpg" alt="Direct Cooling System Diagram">
+                <p class="diagram-caption">Complete Direct System: Closed Loop Cooling Tower → Chiller → Air Handler with integrated pumps for optimal cooling performance</p>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <h3 style="color: #2c5f2d; font-size: 1.8rem; margin-bottom: 20px;">System Components</h3>
+                <table class="specs-table">
+                    <tr>
+                        <th>Component</th>
+                        <th>Function</th>
+                        <th>Key Features</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Closed Loop Cooling Tower</strong></td>
+                        <td>Primary heat rejection system</td>
+                        <td>Energy efficient, low maintenance, corrosion resistant</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chiller Unit</strong></td>
+                        <td>Refrigeration system for cooling</td>
+                        <td>High efficiency, precise temperature control</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Air Handler (CW Coil)</strong></td>
+                        <td>Air conditioning and distribution</td>
+                        <td>Uniform cooling, low noise operation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Chilled Water Pump</strong></td>
+                        <td>Circulates cold water through system</td>
+                        <td>Variable speed, energy saving</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cooling Tower Pump</strong></td>
+                        <td>Maintains water flow in cooling tower</td>
+                        <td>Robust design, reliable performance</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Products Page 1 -->
+        <div class="catalogue-page">
+            <div class="page-header">
+                <h2>Our Product Range</h2>
+                <p>Comprehensive Cooling Solutions for Every Industry</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/8c929026-b14e-40db-a8e4-36a92aca396b/2025-12-06T09-40-32-850Z-0a7a0175-chat-image-1765014032829-0.jpg" alt="Industrial Cooling Tower" class="product-image">
+                    <div class="product-details">
+                        <h3>Industrial Cooling Towers</h3>
+                        <p>Heavy-duty cooling towers engineered for large-scale industrial applications with superior heat dissipation capabilities.</p>
+                        <div class="specifications">
+                            <h4>Key Specifications:</h4>
+                            <ul>
+                                <li>Capacity: 50 TR to 500 TR</li>
+                                <li>Material: FRP/MS Construction</li>
+                                <li>Cooling Range: 5°C to 15°C</li>
+                                <li>High cooling efficiency</li>
+                                <li>Corrosion resistant body</li>
+                                <li>Low power consumption</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/8c929026-b14e-40db-a8e4-36a92aca396b/2025-12-06T10-00-33-941Z-fe630c95-chat-image-1765015233921-0.jpg" alt="Round Cooling Tower" class="product-image">
+                    <div class="product-details">
+                        <h3>Round Cooling Towers</h3>
+                        <p>Circular design cooling towers offering optimal water distribution and uniform cooling performance.</p>
+                        <div class="specifications">
+                            <h4>Key Specifications:</h4>
+                            <ul>
+                                <li>Capacity: 10 TR to 200 TR</li>
+                                <li>360° water distribution</li>
+                                <li>Compact footprint</li>
+                                <li>Space-efficient design</li>
+                                <li>Easy installation</li>
+                                <li>Minimal maintenance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Products Page 2 -->
+        <div class="catalogue-page">
+            <div class="page-header">
+                <h2>Product Range (Continued)</h2>
+                <p>Advanced Cooling Solutions</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/8c929026-b14e-40db-a8e4-36a92aca396b/2025-12-06T10-00-34-150Z-2a181c5b-chat-image-1765015234128-1.jpg" alt="Large Capacity Tower" class="product-image">
+                    <div class="product-details">
+                        <h3>Large Capacity Cooling Towers</h3>
+                        <p>High-capacity cooling systems designed for heavy industrial operations requiring maximum cooling output.</p>
+                        <div class="specifications">
+                            <h4>Key Specifications:</h4>
+                            <ul>
+                                <li>Capacity: 200 TR to 1000 TR</li>
+                                <li>Heavy-duty construction</li>
+                                <li>Industrial grade materials</li>
+                                <li>Maximum cooling output</li>
+                                <li>Weather resistant</li>
+                                <li>Long service life</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/8c929026-b14e-40db-a8e4-36a92aca396b/2025-12-06T09-40-33-317Z-d41b4f31-chat-image-1765014033298-3.jpg" alt="Compact Cooling System" class="product-image">
+                    <div class="product-details">
+                        <h3>Compact Cooling Systems</h3>
+                        <p>Space-efficient cooling solutions perfect for medium-scale operations without compromising performance.</p>
+                        <div class="specifications">
+                            <h4>Key Specifications:</h4>
+                            <ul>
+                                <li>Capacity: 5 TR to 50 TR</li>
+                                <li>Space-saving design</li>
+                                <li>Quick installation</li>
+                                <li>Cost-effective solution</li>
+                                <li>Low noise operation</li>
+                                <li>Energy efficient</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Products Page 3 -->
+        <div class="catalogue-page">
+            <div class="page-header">
+                <h2>Specialized Products</h2>
+                <p>PVC Fills & Custom Solutions</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/8c929026-b14e-40db-a8e4-36a92aca396b/2025-12-06T09-40-33-008Z-fcc3a170-chat-image-1765014032990-1.jpg" alt="PVC Fills" class="product-image">
+                    <div class="product-details">
+                        <h3>PVC Cooling Tower Fills</h3>
+                        <p>Premium quality PVC fills ensuring maximum water-air contact surface area for efficient heat transfer.</p>
+                        <div class="specifications">
+                            <h4>Key Specifications:</h4>
+                            <ul>
+                                <li>Material: Virgin PVC</li>
+                                <li>High thermal efficiency</li>
+                                <li>UV stabilized</li>
+                                <li>Chemical resistant</li>
+                                <li>Long service life (10+ years)</li>
+                                <li>Easy to clean and maintain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/8c929026-b14e-40db-a8e4-36a92aca396b/2025-12-06T09-40-33-171Z-3c65518d-chat-image-1765014033152-2.jpg" alt="Custom Solutions" class="product-image">
+                    <div class="product-details">
+                        <h3>Custom Cooling Solutions</h3>
+                        <p>Tailored cooling tower systems designed and manufactured to meet your specific industrial requirements.</p>
+                        <div class="specifications">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Customized design</li>
+                                <li>Application-specific engineering</li>
+                                <li>Expert consultation</li>
+                                <li>Flexible capacity options</li>
+                                <li>Site-specific installation</li>
+                                <li>Complete technical support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Technical Specifications -->
+        <div class="catalogue-page">
+            <div class="page-header">
+                <h2>Technical Specifications</h2>
+                <p>Detailed Product Information</p>
+            </div>
+            
+            <h3 style="color: #2c5f2d; font-size: 1.8rem; margin-bottom: 20px;">Standard Cooling Tower Range</h3>
+            <table class="specs-table">
+                <tr>
+                    <th>Model</th>
+                    <th>Capacity (TR)</th>
+                    <th>Water Flow (LPM)</th>
+                    <th>Fan Motor (HP)</th>
+                    <th>Dimensions (L×W×H)</th>
+                </tr>
+                <tr>
+                    <td>SCT-10</td>
+                    <td>10 TR</td>
+                    <td>120 LPM</td>
+                    <td>1 HP</td>
+                    <td>1200×1200×1800 mm</td>
+                </tr>
+                <tr>
+                    <td>SCT-25</td>
+                    <td>25 TR</td>
+                    <td>300 LPM</td>
+                    <td>2 HP</td>
+                    <td>1500×1500×2200 mm</td>
+                </tr>
+                <tr>
+                    <td>SCT-50</td>
+                    <td>50 TR</td>
+                    <td>600 LPM</td>
+                    <td>3 HP</td>
+                    <td>2000×2000×2800 mm</td>
+                </tr>
+                <tr>
+                    <td>SCT-100</td>
+                    <td>100 TR</td>
+                    <td>1200 LPM</td>
+                    <td>5 HP</td>
+                    <td>2500×2500×3500 mm</td>
+                </tr>
+                <tr>
+                    <td>SCT-200</td>
+                    <td>200 TR</td>
+                    <td>2400 LPM</td>
+                    <td>10 HP</td>
+                    <td>3500×3500×4500 mm</td>
+                </tr>
+                <tr>
+                    <td>SCT-500</td>
+                    <td>500 TR</td>
+                    <td>6000 LPM</td>
+                    <td>20 HP</td>
+                    <td>5000×5000×6000 mm</td>
+                </tr>
+            </table>
+            
+            <div style="margin-top: 50px;">
+                <h3 style="color: #2c5f2d; font-size: 1.8rem; margin-bottom: 20px;">Material Specifications</h3>
+                <div class="info-box">
+                    <p><strong>Body Construction:</strong> FRP (Fiber Reinforced Plastic) / MS (Mild Steel) with anti-corrosive coating</p>
+                    <p><strong>Fill Material:</strong> Virgin PVC with UV stabilizers</p>
+                    <p><strong>Fan Blades:</strong> Aluminum alloy / FRP</p>
+                    <p><strong>Motor:</strong> IP55 rated, totally enclosed fan cooled (TEFC)</p>
+                    <p><strong>Drift Eliminators:</strong> PVC with high efficiency design</p>
+                    <p><strong>Water Distribution:</strong> PVC pipes with precision nozzles</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Page -->
+        <div class="contact-page">
+            <div style="padding: 50px;">
+                <h2>Contact Us</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 20px;">Get in touch for quotes, technical support, or any inquiries</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-box">
+                        <div class="contact-icon">📍</div>
+                        <h3>Visit Us</h3>
+                        <p>Sharda Cooling System</p>
+                        <p>Industrial Area</p>
+                        <p>India</p>
+                        <p style="margin-top: 15px;">Mon - Sat: 9 AM - 6 PM</p>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <div class="contact-icon">📞</div>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a></p>
+                        <p><a href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a></p>
+                        <p style="margin-top: 15px;">Available during business hours</p>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:info@shardacooling.com">info@shardacooling.com</a></p>
+                        <p><a href="mailto:sales@shardacooling.com">sales@shardacooling.com</a></p>
+                        <p style="margin-top: 15px;">24-hour response time</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 60px;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Our Services</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 800px; margin: 0 auto;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                            <p>✓ Free Site Survey & Consultation</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                            <p>✓ Custom Design & Engineering</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                            <p>✓ Professional Installation</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px;">
+                            <p>✓ After-Sales Support & Maintenance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 60px;">
+                    <p style="font-size: 1.2rem;">Visit our website: <a href="https://yadavvijaylaxmi065-commits.github.io/sharda-cooling-system/" style="color: white; font-weight: bold;">www.shardacooling.com</a></p>
+                    <p style="font-size: 1.2rem; margin-top: 10px;">IndiaMART: <a href="https://m.indiamart.com/shardacoolingsystem/" style="color: white; font-weight: bold;">View Profile</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="catalogue-footer">
+            <p style="font-size: 1.2rem; font-weight: bold;">SHARDA COOLING SYSTEM</p>
+            <p>Industrial Cooling Towers | Scrubbers | PVC Fills Manufacturer</p>
+            <p style="margin-top: 15px;">&copy; 2024 Sharda Cooling System. All Rights Reserved.</p>
+            <p>Catalogue Version 2024-2025 | Subject to technical modifications</p>
+        </div>
+        
+    </div>
+</body>
+</html>
